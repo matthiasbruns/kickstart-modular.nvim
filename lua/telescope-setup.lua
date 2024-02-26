@@ -77,5 +77,9 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
-
+vim.keymap.set('n', '<leader>pf', require('telescope.builtin').find_files, { desc = '[P]roject [F]ind' })
+vim.keymap.set('n', '<leader>ps', function()
+	require( 'telescope.builtin').grep_string({ search = vim.fn.input ("Grep > ") }, { desc = '[P]roject [S]earch' })
+end )
+vim.keymap.set('n', '<leader>fb', require( 'telescope.builtin').buffers, {})
 -- vim: ts=2 sts=2 sw=2 et

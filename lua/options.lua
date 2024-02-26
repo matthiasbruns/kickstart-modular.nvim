@@ -40,3 +40,15 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- vim: ts=2 sts=2 sw=2 et
+vim.opt.colorcolumn = "150"
+vim.opt.scrolloff = 8
+vim.opt.isfname:append("@-@")
+
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+vim.cmd.colorscheme("dracula")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
